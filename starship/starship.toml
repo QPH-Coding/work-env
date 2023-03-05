@@ -1,0 +1,70 @@
+# Use custom format
+format = '''
+[](bold green)$os$directory$jobs$git_branch$git_state$git_status$character'''
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[character]
+success_symbol = '[](bold green) '
+error_symbol = '[󰑙](bold red) '
+
+[directory]
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = ' '
+truncation_length = 25
+truncation_symbol = '..'
+
+
+[git_status]
+style = 'yellow'
+conflicted = '󰗖 '
+ahead = '󰬭 ${count}'
+diverged = '󰬭 ${ahead_count}󰬧 ${behind_count}'
+behind = '󰬧 ${count}'
+up_to_date = '󰗡 '
+untracked = ' '
+stashed = '󱇮 '
+modified = '󰝶 '
+staged = '󱤧 '
+renamed = '󰷹 '
+deleted = '󰅚 '
+
+[jobs]
+symbol = ' '
+
+[os]
+disabled = false
+
+[os.symbols]
+Alpine = " "
+Android = "🤖 "
+Arch = " "
+CentOS = " "
+Debian = " "
+Fedora = "🎩 "
+FreeBSD = "😈 "
+Gentoo = "🗜️ "
+Linux = " "
+Macos = " "
+Manjaro = " "
+OpenBSD = "🐡 "
+openSUSE = "🦎 "
+Redhat = "🎩 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰖳 "
+
+[time]
+disabled = false
+format = '[\[$time\]]($style) '
+time_format = '%T'
+utc_time_offset = '+8'

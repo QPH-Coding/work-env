@@ -1,0 +1,31 @@
+{
+    "workspace.library": [
+        "/Users/qianpeihua/.config/nvim",
+        "/Users/qianpeihua/.local/share/nvim/site",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/mason.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/noice.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nui.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-notify",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/vim-bbye",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
+        "/Users/qianpeihua/mybin/nvim-macos/share/nvim/runtime",
+        "/Users/qianpeihua/mybin/nvim-macos/lib/nvim",
+        "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/zephyr-nvim/after",
+        "${3rd}/luassert/library"
+    ],
+    "workspace.checkThirdParty": false
+}
