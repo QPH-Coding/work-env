@@ -137,14 +137,6 @@
     "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor"
   },
-  {
-    "key": "ctrl+j",
-    "command": "editor.gotoNextFold"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "editor.gotoPreviousFold"
-  },
   // move cursor in insert through Ctrl + hjkl
   {
     "key": "ctrl+j",

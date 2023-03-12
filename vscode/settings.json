@@ -122,6 +122,7 @@
   "vim.incsearch": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
+  "vim.foldfix": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["space"],
@@ -162,7 +163,6 @@
   "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.enableNeovim": true,
   "vim.neovimPath": "/Users/qianpeihua/mybin/nvim-macos/bin/nvim",
-  "vim.cursorStylePerMode.insert": "block",
   "vim.useSystemClipboard": true,
   "vim.timeout": 500,
   "whichkey.bindings": [
