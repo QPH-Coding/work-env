@@ -1,0 +1,464 @@
+{
+  "files.autoGuessEncoding": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.wordWrap": "on",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.suggestSelection": "recentlyUsed",
+  "window.dialogStyle": "custom",
+  "debug.showBreakpointsInOverviewRuler": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMapByFileExtension": {
+    "cpp": "cd $dir && g++ $fileName -o -Wall -g $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.fontFamily": "Maple Mono,Symbols Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.quickSuggestionsDelay": 0,
+  "html.format.unformatted": "",
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "C_Cpp.clang_format_style": "file",
+  "editor.occurrencesHighlight": false,
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true,
+    "zh-hant": true
+  },
+  "editor.minimap.autohide": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.renderLineHighlight": "all",
+  "editor.rulers": [80, 120],
+  "debug.showInStatusBar": "never",
+  "cmake.statusbar.advanced": {
+    "buildTarget": {
+      "visibility": "hidden"
+    },
+    "launch": {
+      "visibility": "icon"
+    },
+    "debug": {
+      "visibility": "icon"
+    },
+    "status": {
+      "visibility": "hidden"
+    },
+    "launchTarget": {
+      "visibility": "hidden"
+    },
+    "kit": {
+      "visibility": "hidden"
+    }
+  },
+  "todo-tree.general.statusBar": "total",
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "vm-ubuntu": "linux",
+    "103.153.139.208": "linux"
+  },
+  "luahelper.format.tab_width": 2,
+  "editor.tabSize": 2,
+  "cmake.configureOnOpen": true,
+  "cmake.cpptools.compilerPath": "/usr/bin/g++",
+  "cmake.cpptools.intelliSenseMode": "gcc-x64",
+  "cmake.default.generator": "Unix Makefiles",
+  "cmake.buildArgs": [
+    "-DCMAKE_C_COMPILER=/usr/bin/gcc",
+    "-DCMAKE_CXX_COMPLIER=/usr/bin/g++",
+    "-G\"CodeBlocks -Unix Makefiles\""
+  ],
+  "cmake.buildToolArgs": [
+    "-DCMAKE_C_COMPILER=/usr/bin/gcc",
+    "-DCMAKE_CXX_COMPLIER=/usr/bin/g++"
+  ],
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "cmake.buildTask": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "clangd.fallbackFlags": ["-std=c++20"],
+  "C_Cpp.autocomplete": "disabled",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "Lua.diagnostics.globals": ["vim"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#7aa2f7", "#1f2335"],
+  "vim.statusBarColors.insert": ["#3d59a1", "#c0caf5"],
+  "vim.statusBarColors.visual": "#41a6b5",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#db4b4b",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["space"],
+      "commands": ["whichkey.show"]
+    },
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<S-b>"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["space"],
+      "commands": ["whichkey.show"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [],
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/Users/qianpeihua/mybin/nvim-macos/bin/nvim",
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.useSystemClipboard": true,
+  "vim.timeout": 500,
+  "whichkey.bindings": [
+    {
+      "key": "o",
+      "name": "show ...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "f",
+          "name": "show explorer in side bar",
+          "type": "command",
+          "command": "workbench.view.explorer"
+        },
+        {
+          "key": "s",
+          "name": "show search in side bar",
+          "type": "command",
+          "command": "workbench.view.search"
+        },
+        {
+          "key": "g",
+          "name": "show git in side bar",
+          "type": "command",
+          "command": "workbench.view.scm"
+        },
+        {
+          "key": "d",
+          "name": "show debug in side bar",
+          "type": "command",
+          "command": "workbench.view.debug"
+        },
+        {
+          "key": "e",
+          "name": "show problems in panel",
+          "type": "command",
+          "command": "workbench.actions.view.problems"
+        },
+        {
+          "key": "t",
+          "name": "show terminal in panel",
+          "type": "command",
+          "command": "workbench.action.terminal.toggleTerminal"
+        }
+      ]
+    },
+    // g --- code
+    {
+      "key": "g",
+      "name": "about lsp",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "a",
+          "name": "code action",
+          "type": "command",
+          "command": "editor.action.quickFix"
+        },
+        {
+          "key": "d",
+          "name": "go to definition",
+          "type": "command",
+          "command": "editor.action.revealDefinition"
+        },
+        {
+          "key": "e",
+          "name": "error, warn, info",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "n",
+              "name": "next problem in project",
+              "type": "command",
+              "command": "editor.action.marker.nextInFiles"
+            },
+            {
+              "key": "p",
+              "name": "prev problem in project",
+              "type": "command",
+              "command": "editor.action.marker.prevInFiles"
+            },
+            {
+              "key": "j",
+              "name": "next problem in file",
+              "type": "command",
+              "command": "editor.action.marker.next"
+            },
+            {
+              "key": "k",
+              "name": "prev problem in file",
+              "type": "command",
+              "command": "editor.action.marker.prev"
+            }
+          ]
+        },
+        {
+          "key": "f",
+          "name": "fold the code",
+          "type": "command",
+          "command": "editor.toggleFold"
+        },
+        {
+          "key": "h",
+          "name": "peek references",
+          "type": "command",
+          "command": "editor.action.referenceSearch.trigger"
+        },
+        {
+          "key": "H",
+          "name": "search references",
+          "type": "command",
+          "command": "references-view.findReferences"
+        },
+        {
+          "key": "k",
+          "name": "peek definition",
+          "type": "command",
+          "command": "editor.action.peekDefinition"
+        },
+        {
+          "key": "l",
+          "name": "show function call hierarchy",
+          "type": "command",
+          "command": "references-view.showCallHierarchy"
+        },
+        {
+          "key": "o",
+          "name": "Outline",
+          "type": "command",
+          "command": "workbench.action.toggleAuxiliaryBar"
+        },
+        {
+          "key": "r",
+          "name": "rename symbols",
+          "type": "command",
+          "command": "editor.action.rename"
+        },
+        {
+          "command": "workbench.action.gotoSymbol",
+          "key": "s",
+          "name": "Search document symbol",
+          "type": "command"
+        },
+        {
+          "command": "workbench.action.showAllSymbols",
+          "key": "S",
+          "name": "Search project symbol",
+          "type": "command"
+        }
+      ]
+    },
+    // f --- find
+    {
+      "key": "f",
+      "name": "find...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "f",
+          "name": "find file",
+          "type": "command",
+          "command": "workbench.action.quickOpen"
+        },
+        {
+          "key": "b",
+          "name": "find in current buffer",
+          "type": "command",
+          "command": "actions.find"
+        },
+        {
+          "key": "g",
+          "name": "global find",
+          "type": "command",
+          "command": "search.action.openEditor"
+        },
+        {
+          "key": "r",
+          "name": "replace",
+          "type": "command",
+          "command": "editor.action.startFindReplaceAction"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "name": "git...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "conflict diff3",
+          "type": "command",
+          "command": "git.runGitMergeDiff3"
+        }
+      ]
+    },
+    // debug...
+    {
+      "key": "d",
+      "name": "debug & run",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "start debug",
+          "type": "command",
+          "command": "workbench.action.debug.start"
+        },
+        {
+          "key": "r",
+          "name": "start no debug",
+          "type": "bindings",
+          "command": "workbench.action.debug.run"
+        }
+      ]
+    },
+    {
+      "key": "w",
+      "name": "save file",
+      "type": "command",
+      "command": "workbench.action.files.save"
+    },
+    {
+      "key": "z",
+      "name": "zen mode",
+      "type": "command",
+      "command": "workbench.action.toggleZenMode"
+    }
+  ],
+  "multiCommand.commands": [
+    {
+      "command": "easymotion.jumpEverywhere",
+      "sequence": [
+        "workbench.action.closeQuickOpen",
+        {
+          "command": "vim.remap",
+          "args": {
+            "after": ["leader", "leader", "leader", "j"]
+          }
+        }
+      ]
+    },
+    {
+      "command": "easymotion.findWord",
+      "sequence": [
+        "workbench.action.closeQuickOpen",
+        {
+          "command": "vim.remap",
+          "args": {
+            "after": ["leader", "leader", "leader", "b", "d", "w"]
+          }
+        }
+      ]
+    },
+    {
+      "command": "easymotion.findChar",
+      "sequence": [
+        "workbench.action.closeQuickOpen",
+        {
+          "command": "vim.remap",
+          "args": {
+            "after": ["leader", "leader", "leader", "b", "d", "t"]
+          }
+        }
+      ]
+    }
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#7aa2f7",
+    "statusBar.noFolderBackground": "#7aa2f7",
+    "statusBar.debuggingBackground": "#7aa2f7",
+    "statusBar.foreground": "#1f2335",
+    "statusBar.debuggingForeground": "#1f2335"
+  },
+  "editor.minimap.size": "fit",
+  "cSpell.userWords": ["hjkl"],
+  "editor.minimap.enabled": false,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.cpp",
+    "**/*.cc",
+    "**/*.c",
+    "**/*.go",
+    "**/*.java",
+    "**/*.vue",
+    "**/*.py",
+    "**/*.lua",
+    "**/*.sh"
+  ]
+}

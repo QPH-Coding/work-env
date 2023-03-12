@@ -5,6 +5,11 @@ cp ~/.config/wezterm/wezterm.lua ./wezterm/
 cp ~/.config/starship.toml ./starship/
 cp -r ~/.tmux/* ./tmux/.tmux/
 cp ~/.tmux.conf ./tmux/
+cp /Users/qianpeihua/Library/Application\ Support/Code/User/settings.json ./vscode/
+cp /Users/qianpeihua/Library/Application\ Support/Code/User/keybindings.json ./vscode/
+cp /Users/qianpeihua/Library/Application\ Support/Code/User/tasks.json ./vscode/
+cp -r /Users/qianpeihua/Library/Application\ Support/Code/User/snippets ./vscode/
+
 
 rm -rf ./tmux/.tmux/plugins/tpm/.git/
 rm -rf ./tmux/.tmux/plugins/tmux-cpu/.git/

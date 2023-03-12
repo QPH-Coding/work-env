@@ -34,7 +34,6 @@ map("i", "<C-l>", "<right>", opt)
 map("i", "<C-j>", "<down>", opt)
 map("i", "<C-k>", "<up>", opt)
 
-
 -- ' ' + t/vt 打开终端，之后可能会弃用
 -- map("n", "<leader>t", ":sp | terminal<CR> a", opt)
 -- map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
@@ -56,63 +55,64 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 map("n", "qq", ":q<CR>", opt)
 map("n", "q1", ":q!<CR>", opt)
 map("n", "wq", ":wq<CR>", opt)
+map("n", "<leader>ww", ":w<CR>", opt)
 
 PluginKeyList = {}
 
 -- nvim-tree keybinding
-map('n', '<A-m>', ':NvimTreeToggle<CR>', opt)
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 PluginKeyList.nvimTree = {
-  -- user mappings go here
-  { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-  { key = "<C-e>",                          action = "edit_in_place" },
-  { key = "O",                              action = "edit_no_picker" },
-  -- Control + j 打开当前指定的目录, Control + k 打开上级目录
-  { key = { "<C-j>", "<2-RightMouse>" },    action = "cd" },
-  { key = "<C-k>",                          action = "dir_up" },
-  { key = "<C-v>",                          action = "vsplit" },
-  { key = "<C-x>",                          action = "split" },
-  { key = "<C-t>",                          action = "tabnew" },
-  { key = "<",                              action = "prev_sibling" },
-  { key = ">",                              action = "next_sibling" },
-  { key = "P",                              action = "parent_node" },
-  { key = "<BS>",                           action = "close_node" },
-  { key = "<Tab>",                          action = "preview" },
-  { key = "K",                              action = "first_sibling" },
-  { key = "J",                              action = "last_sibling" },
-  { key = "C",                              action = "toggle_git_clean" },
-  { key = "I",                              action = "toggle_git_ignored" },
-  { key = "H",                              action = "toggle_dotfiles" },
-  { key = "B",                              action = "toggle_no_buffer" },
-  { key = "U",                              action = "toggle_custom" },
-  { key = "<F5>",                           action = "refresh" },
-  { key = "a",                              action = "create" },
-  { key = "d",                              action = "remove" },
-  { key = "D",                              action = "trash" },
-  { key = "r",                              action = "rename" },
-  { key = "<C-r>",                          action = "full_rename" },
-  { key = "e",                              action = "rename_basename" },
-  { key = "x",                              action = "cut" },
-  { key = "c",                              action = "copy" },
-  { key = "p",                              action = "paste" },
-  { key = "y",                              action = "copy_name" },
-  { key = "Y",                              action = "copy_path" },
-  { key = "gy",                             action = "copy_absolute_path" },
-  { key = "[e",                             action = "prev_diag_item" },
-  { key = "[c",                             action = "prev_git_item" },
-  { key = "]e",                             action = "next_diag_item" },
-  { key = "]c",                             action = "next_git_item" },
-  { key = "s",                              action = "system_open" },
-  { key = "f",                              action = "live_filter" },
-  { key = "F",                              action = "clear_live_filter" },
-  { key = "q",                              action = "close" },
-  { key = "W",                              action = "collapse_all" },
-  { key = "E",                              action = "expand_all" },
-  { key = "S",                              action = "search_node" },
-  { key = ".",                              action = "run_file_command" },
-  { key = "i",                              action = "toggle_file_info" },
-  { key = "g?",                             action = "toggle_help" },
-  { key = "m",                              action = "toggle_mark" },
-  { key = "bmv",                            action = "bulk_move" },
+    -- user mappings go here
+    { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
+    { key = "<C-e>",                          action = "edit_in_place" },
+    { key = "O",                              action = "edit_no_picker" },
+    -- Control + j 打开当前指定的目录, Control + k 打开上级目录
+    { key = { "<C-j>", "<2-RightMouse>" },    action = "cd" },
+    { key = "<C-k>",                          action = "dir_up" },
+    { key = "<C-v>",                          action = "vsplit" },
+    { key = "<C-x>",                          action = "split" },
+    { key = "<C-t>",                          action = "tabnew" },
+    { key = "<",                              action = "prev_sibling" },
+    { key = ">",                              action = "next_sibling" },
+    { key = "P",                              action = "parent_node" },
+    { key = "<BS>",                           action = "close_node" },
+    { key = "<Tab>",                          action = "preview" },
+    { key = "K",                              action = "first_sibling" },
+    { key = "J",                              action = "last_sibling" },
+    { key = "C",                              action = "toggle_git_clean" },
+    { key = "I",                              action = "toggle_git_ignored" },
+    { key = "H",                              action = "toggle_dotfiles" },
+    { key = "B",                              action = "toggle_no_buffer" },
+    { key = "U",                              action = "toggle_custom" },
+    { key = "<F5>",                           action = "refresh" },
+    { key = "a",                              action = "create" },
+    { key = "d",                              action = "remove" },
+    { key = "D",                              action = "trash" },
+    { key = "r",                              action = "rename" },
+    { key = "<C-r>",                          action = "full_rename" },
+    { key = "e",                              action = "rename_basename" },
+    { key = "x",                              action = "cut" },
+    { key = "c",                              action = "copy" },
+    { key = "p",                              action = "paste" },
+    { key = "y",                              action = "copy_name" },
+    { key = "Y",                              action = "copy_path" },
+    { key = "gy",                             action = "copy_absolute_path" },
+    { key = "[e",                             action = "prev_diag_item" },
+    { key = "[c",                             action = "prev_git_item" },
+    { key = "]e",                             action = "next_diag_item" },
+    { key = "]c",                             action = "next_git_item" },
+    { key = "s",                              action = "system_open" },
+    { key = "f",                              action = "live_filter" },
+    { key = "F",                              action = "clear_live_filter" },
+    { key = "q",                              action = "close" },
+    { key = "W",                              action = "collapse_all" },
+    { key = "E",                              action = "expand_all" },
+    { key = "S",                              action = "search_node" },
+    { key = ".",                              action = "run_file_command" },
+    { key = "i",                              action = "toggle_file_info" },
+    { key = "g?",                             action = "toggle_help" },
+    { key = "m",                              action = "toggle_mark" },
+    { key = "bmv",                            action = "bulk_move" },
 }
 
 -- bufferline keybinding
@@ -128,64 +128,64 @@ map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 map("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 
 PluginKeyList.telescope = {
-  i = {
-    -- 上下移动
-    -- 由于出来的窗口是反向向上的，所有这里的的配置也都反向
-    -- ["<C-k>"] = "move_selection_next",
-    -- ["<C-j>"] = "move_selection_previous",
-    ["<Up>"] = "move_selection_previous",
-    ["<Down>"] = "move_selection_next",
-    -- 历史记录
-    ["<C-n>"] = "cycle_history_next",
-    ["<C-p>"] = "cycle_history_prev",
-    -- 关闭窗口
-    ["<C-c>"] = "close",
-    -- 预览窗口上下滚动
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
-  },
+    i = {
+        -- 上下移动
+        -- 由于出来的窗口是反向向上的，所有这里的的配置也都反向
+        -- ["<C-k>"] = "move_selection_next",
+        -- ["<C-j>"] = "move_selection_previous",
+            ["<Up>"] = "move_selection_previous",
+            ["<Down>"] = "move_selection_next",
+        -- 历史记录
+            ["<C-n>"] = "cycle_history_next",
+            ["<C-p>"] = "cycle_history_prev",
+        -- 关闭窗口
+            ["<C-c>"] = "close",
+        -- 预览窗口上下滚动
+            ["<C-u>"] = "preview_scrolling_up",
+            ["<C-d>"] = "preview_scrolling_down",
+    },
 }
 
 -- treesitter keybinding
 PluginKeyList.treesitter = {}
 PluginKeyList.treesitter.selection = {
-  init_selection = "<CR><CR>", -- set to `false` to disable one of the mappings
-  node_incremental = "<CR><CR>",
-  scope_incremental = "<CR>o",
-  node_decremental = "<BS><BS>",
+    init_selection = "<CR><CR>", -- set to `false` to disable one of the mappings
+    node_incremental = "<CR><CR>",
+    scope_incremental = "<CR>o",
+    node_decremental = "<BS><BS>",
 }
 
-map('n', '<leader><space>w', ':HopWord<CR>', opt)
-map('n', '<leader><space>e', ':HopChar2<CR>', opt)
-map('n', '<leader><space>r', ':HopChar1<CR>', opt)
+map("n", "<leader><space>w", ":HopWord<CR>", opt)
+map("n", "<leader><space>e", ":HopChar2<CR>", opt)
+map("n", "<leader><space>r", ":HopChar1<CR>", opt)
 
 -- Mason keybinding
 PluginKeyList.mason = {
-  -- Keymap to expand a package
-  toggle_package_expand = "<CR>",
-  -- Keymap to install the package under the current cursor position
-  install_package = "i",
-  -- Keymap to reinstall/update the package under the current cursor position
-  update_package = "u",
-  -- Keymap to check for new version for the package under the current cursor position
-  check_package_version = "c",
-  -- Keymap to update all installed packages
-  update_all_packages = "U",
-  -- Keymap to check which installed packages are outdated
-  check_outdated_packages = "C",
-  -- Keymap to uninstall a package
-  uninstall_package = "X",
-  -- Keymap to cancel a package installation
-  cancel_installation = "<C-c>",
-  -- Keymap to apply language filter
-  apply_language_filter = "<C-f>",
+    -- Keymap to expand a package
+    toggle_package_expand = "<CR>",
+    -- Keymap to install the package under the current cursor position
+    install_package = "i",
+    -- Keymap to reinstall/update the package under the current cursor position
+    update_package = "u",
+    -- Keymap to check for new version for the package under the current cursor position
+    check_package_version = "c",
+    -- Keymap to update all installed packages
+    update_all_packages = "U",
+    -- Keymap to check which installed packages are outdated
+    check_outdated_packages = "C",
+    -- Keymap to uninstall a package
+    uninstall_package = "X",
+    -- Keymap to cancel a package installation
+    cancel_installation = "<C-c>",
+    -- Keymap to apply language filter
+    apply_language_filter = "<C-f>",
 }
 
 -- twilight zen-mode
 map("n", "<leader>z", ":Twilight<CR>", opt)
 
 -- lspconfig keybinding & navic
-setkey('n', '<space>e', vim.diagnostic.open_float, opt)
+setkey("n", "<space>e", vim.diagnostic.open_float, opt)
 -- setkey('n', 'dk', vim.diagnostic.goto_prev, opt)
 -- setkey('n', 'dj', vim.diagnostic.goto_next, opt)
 -- setkey('n', '<space>q', vim.diagnostic.setloclist, opt)
@@ -202,32 +202,34 @@ setkey('n', '<space>e', vim.diagnostic.open_float, opt)
 --   return false
 -- end
 PluginKeyList.lspconfig_on_attach = function(client, bufnr)
-  -- 禁用格式化功能，交给专门插件插件处理
-  client.server_capabilities.document_formatting = false
-  client.server_capabilities.document_range_formatting = false
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  -- if not is_skip_navic(client) then
-  --   navic.attach(client, bufnr)
-  -- end
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap = true, silent = true, buffer = bufnr }
-  -- setkey('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  -- setkey('n', 'gd', vim.lsp.buf.definition, bufopts)
-  -- setkey('n', 'K', vim.lsp.buf.hover, bufopts)
-  setkey('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  -- setkey('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  setkey('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  setkey('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  setkey('n', '<space>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, bufopts)
-  -- setkey('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-  -- setkey('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-  -- setkey('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-  -- setkey('n', 'gr', vim.lsp.buf.references, bufopts)
-  setkey('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    -- 禁用格式化功能，交给专门插件插件处理
+    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_range_formatting = false
+    -- Enable completion triggered by <c-x><c-o>
+    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+    -- if not is_skip_navic(client) then
+    --   navic.attach(client, bufnr)
+    -- end
+    -- Mappings.
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    -- setkey('n', 'gD', vim.lsp.buf.declaration, bufopts)
+    -- setkey('n', 'gd', vim.lsp.buf.definition, bufopts)
+    -- setkey('n', 'K', vim.lsp.buf.hover, bufopts)
+    setkey("n", "gi", vim.lsp.buf.implementation, bufopts)
+    -- setkey('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+    setkey("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
+    setkey("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+    setkey("n", "<space>wl", function()
+        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, bufopts)
+    -- setkey('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+    -- setkey('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+    -- setkey('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    -- setkey('n', 'gr', vim.lsp.buf.references, bufopts)
+    setkey("n", "<space>f", function()
+        vim.lsp.buf.format({ async = true })
+    end, bufopts)
 end
 
 -- lspsaga keybinding
@@ -267,7 +269,6 @@ map("n", "gt", ":Lspsaga peek_type_definition<CR>", opt)
 
 -- Go to type definition
 -- map("n", "gt", ":Lspsaga goto_type_definition<CR>", opt)
-
 
 -- Show line diagnostics
 -- You can pass argument ++unfocus to
@@ -322,94 +323,95 @@ map("n", "<Leader>co", ":Lspsaga outgoing_calls<CR>", opt)
 -- map("n", "<A-d>", ":Lspsaga term_toggle<CR>", opt)
 -- map("t", "<A-d>", ":Lspsaga term_toggle<CR>", opt)
 
-
 -- cmp keybinding
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 PluginKeyList.cmpkey = function(cmp)
-  return {
-    ['<CR>'] = cmp.mapping.confirm {
-      -- behavior = cmp.ConfirmBehavior.Insert,
-      -- select = true,
-    },
-    -- 解决complete 选择错误之后，不能自动刷新补全
-    ['<BS>'] = function(fallback)
-      fallback()
-      if cmp.visible() then
-        cmp.mapping.abort()
-        cmp.mapping.complete()
-      end
-    end,
-    ['<Tab>'] = function(fallback)
-      if not cmp.select_next_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if not cmp.select_prev_item() then
-        if vim.bo.buftype ~= 'prompt' and has_words_before() then
-          cmp.complete()
-        else
-          fallback()
-        end
-      end
-    end,
-    ["<A-,>"] = cmp.mapping(
-      {
-        i = cmp.mapping.abort(),
-        s = cmp.mapping.close()
-      }
-    ),
-    ["<A-.>"] = cmp.mapping(cmp.mapping.complete()),
-    -- 如果窗口内容太多，可以滚动
-    -- ["<A-u>"] = cmp.mapping(cmp.mapping.scroll_docs( -4), { "i", "c" }),
-    -- ["<A-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-  }
+    return {
+            ["<CR>"] = cmp.mapping.confirm({
+            -- behavior = cmp.ConfirmBehavior.Insert,
+            -- select = true,
+        }),
+        -- 解决complete 选择错误之后，不能自动刷新补全
+            ["<BS>"] = function(fallback)
+            fallback()
+            if cmp.visible() then
+                cmp.mapping.abort()
+                cmp.mapping.complete()
+            end
+        end,
+            ["<Tab>"] = function(fallback)
+            if not cmp.select_next_item() then
+                if vim.bo.buftype ~= "prompt" and has_words_before() then
+                    cmp.complete()
+                else
+                    fallback()
+                end
+            end
+        end,
+            ["<S-Tab>"] = function(fallback)
+            if not cmp.select_prev_item() then
+                if vim.bo.buftype ~= "prompt" and has_words_before() then
+                    cmp.complete()
+                else
+                    fallback()
+                end
+            end
+        end,
+            ["<A-,>"] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            s = cmp.mapping.close(),
+        }),
+            ["<A-.>"] = cmp.mapping(cmp.mapping.complete()),
+        -- 如果窗口内容太多，可以滚动
+        -- ["<A-u>"] = cmp.mapping(cmp.mapping.scroll_docs( -4), { "i", "c" }),
+        -- ["<A-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+    }
 end
 
 -- gitsigns keybinding
 PluginKeyList.gitsignsKey = function(bufnr)
-  local function map(mode, lhs, rhs, opts)
-    opts = vim.tbl_extend('force', { noremap = true, silent = true }, opts or {})
-    vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
-  end
+    local function map(mode, lhs, rhs, opts)
+        opts = vim.tbl_extend("force", { noremap = true, silent = true }, opts or {})
+        vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
+    end
 
-  -- Gitsigns keybinding
-  -- Navigation
-  map('n', '<leader>hj', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
-  map('n', '<leader>hk', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
+    -- Gitsigns keybinding
+    -- Navigation
+    map("n", "<leader>hj", "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
+    map("n", "<leader>hk", "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
 
-  -- Actions
-  map('n', '<leader>hs', ':Gitsigns stage_hunk<CR>')
-  map('v', '<leader>hs', ':Gitsigns stage_hunk<CR>')
-  map('n', '<leader>hr', ':Gitsigns reset_hunk<CR>')
-  map('v', '<leader>hr', ':Gitsigns reset_hunk<CR>')
-  map('n', '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>')
-  map('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>')
-  map('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>')
-  map('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>')
-  -- map('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>')
-  -- map('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>')
-  map('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>')
-  map('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>')
-  map('n', '<leader>td', '<cmd>Gitsigns toggle_deleted<CR>')
+    -- Actions
+    map("n", "<leader>hs", ":Gitsigns stage_hunk<CR>")
+    map("v", "<leader>hs", ":Gitsigns stage_hunk<CR>")
+    map("n", "<leader>hr", ":Gitsigns reset_hunk<CR>")
+    map("v", "<leader>hr", ":Gitsigns reset_hunk<CR>")
+    map("n", "<leader>hS", "<cmd>Gitsigns stage_buffer<CR>")
+    map("n", "<leader>hu", "<cmd>Gitsigns undo_stage_hunk<CR>")
+    map("n", "<leader>hR", "<cmd>Gitsigns reset_buffer<CR>")
+    map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<CR>")
+    -- map('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>')
+    -- map('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>')
+    map("n", "<leader>hd", "<cmd>Gitsigns diffthis<CR>")
+    map("n", "<leader>hD", '<cmd>lua require"gitsigns".diffthis("~")<CR>')
+    map("n", "<leader>td", "<cmd>Gitsigns toggle_deleted<CR>")
 
-  -- Text object
-  map('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
-  map('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
-  map('n', '<leader>hl', ':Gitsigns setqflist<CR>')
-  map('v', '<leader>hl', ':Gitsigns setqflist<CR>')
+    -- Text object
+    map("o", "ih", ":<C-U>Gitsigns select_hunk<CR>")
+    map("x", "ih", ":<C-U>Gitsigns select_hunk<CR>")
+    map("n", "<leader>hl", ":Gitsigns setqflist<CR>")
+    map("v", "<leader>hl", ":Gitsigns setqflist<CR>")
 end
 
-map('n', '<leader>b',
-  ':lua require("dap").toggle_breakpoint();require("config.dap.dap-util").store_breakpoints(true)<CR>', opt)
-map('n', '<leader>db', ':lua require("dap").continue()<CR>', opt)
-map('n', '<C-i>', ':lua require("dap").step_into()<CR>', opt)
-map('n', '<C-o>', ':lua require("dap").step_out()<CR>', opt)
-map('n', '<C-p>', ':lua require("dap").step_over()<CR>', opt)
+map(
+    "n",
+    "<leader>b",
+    ':lua require("dap").toggle_breakpoint();require("config.dap.dap-util").store_breakpoints(true)<CR>',
+    opt
+)
+map("n", "<leader>db", ':lua require("dap").continue()<CR>', opt)
+map("n", "<C-i>", ':lua require("dap").step_into()<CR>', opt)
+map("n", "<C-o>", ':lua require("dap").step_out()<CR>', opt)
+map("n", "<C-p>", ':lua require("dap").step_over()<CR>', opt)
