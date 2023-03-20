@@ -1,8 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local setkey = vim.keymap.set
 local opt = { noremap = true, silent = true }
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- 取消 s 默认功能
 map("n", "s", "", opt)
@@ -55,7 +53,7 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 map("n", "qq", ":q<CR>", opt)
 map("n", "q1", ":q!<CR>", opt)
 map("n", "wq", ":wq<CR>", opt)
-map("n", "<leader>ww", ":w<CR>", opt)
+map("n", "<leader>w", ":w<CR>", opt)
 
 PluginKeyList = {}
 
@@ -120,41 +118,6 @@ map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 map("n", "<C-w>", ":Bdelete<CR>", opt)
 
--- telescope keybinding
--- map("n", "<C-f>", ":Telescope buffers<CR>", opt)
-map("n", "<leader>ff", ":Telescope find_files<CR>", opt)
-map("n", "<leader>fs", ":Telescope grep_string<CR>", opt)
-map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
-map("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>", opt)
-
-PluginKeyList.telescope = {
-    i = {
-        -- 上下移动
-        -- 由于出来的窗口是反向向上的，所有这里的的配置也都反向
-        -- ["<C-k>"] = "move_selection_next",
-        -- ["<C-j>"] = "move_selection_previous",
-            ["<Up>"] = "move_selection_previous",
-            ["<Down>"] = "move_selection_next",
-        -- 历史记录
-            ["<C-n>"] = "cycle_history_next",
-            ["<C-p>"] = "cycle_history_prev",
-        -- 关闭窗口
-            ["<C-c>"] = "close",
-        -- 预览窗口上下滚动
-            ["<C-u>"] = "preview_scrolling_up",
-            ["<C-d>"] = "preview_scrolling_down",
-    },
-}
-
--- treesitter keybinding
-PluginKeyList.treesitter = {}
-PluginKeyList.treesitter.selection = {
-    init_selection = "<CR><CR>", -- set to `false` to disable one of the mappings
-    node_incremental = "<CR><CR>",
-    scope_incremental = "<CR>o",
-    node_decremental = "<BS><BS>",
-}
-
 map("n", "<leader><space>w", ":HopWord<CR>", opt)
 map("n", "<leader><space>e", ":HopChar2<CR>", opt)
 map("n", "<leader><space>r", ":HopChar1<CR>", opt)
@@ -185,7 +148,7 @@ PluginKeyList.mason = {
 map("n", "<leader>z", ":Twilight<CR>", opt)
 
 -- lspconfig keybinding & navic
-setkey("n", "<space>e", vim.diagnostic.open_float, opt)
+-- setkey("n", "<space>e", vim.diagnostic.open_float, opt)
 -- setkey('n', 'dk', vim.diagnostic.goto_prev, opt)
 -- setkey('n', 'dj', vim.diagnostic.goto_next, opt)
 -- setkey('n', '<space>q', vim.diagnostic.setloclist, opt)
@@ -238,24 +201,24 @@ end
 -- If there is no definition, it will instead be hidden
 -- When you use an action in finder like "open vsplit",
 -- you can use <C-t> to jump back
-map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
+-- map("n", "gh", ":Lspsaga lsp_finder<CR>", opt)
 
 -- Code action
-map("n", "<leader>ca", ":Lspsaga code_action<CR>", opt)
-map("v", "<leader>ca", ":Lspsaga code_action<CR>", opt)
+-- map("n", "<leader>ca", ":Lspsaga code_action<CR>", opt)
+-- map("v", "<leader>ca", ":Lspsaga code_action<CR>", opt)
 
 -- Rename all occurrences of the hovered word for the entire file
 -- map("n", "gr", ":Lspsaga rename<CR>", opt)
 
 -- Rename all occurrences of the hovered word for the selected files
-map("n", "gr", ":Lspsaga rename ++project<CR>", opt)
+-- map("n", "gr", ":Lspsaga rename ++project<CR>", opt)
 
 -- Peek definition
 -- You can edit the file containing the definition in the floating window
 -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 -- It also supports tagstack
 -- Use <C-t> to jump back
-map("n", "gd", ":Lspsaga peek_definition<CR>", opt)
+-- map("n", "gd", ":Lspsaga peek_definition<CR>", opt)
 
 -- Go to definition
 -- map("n", "gd", ":Lspsaga goto_definition<CR>", opt)
@@ -265,7 +228,7 @@ map("n", "gd", ":Lspsaga peek_definition<CR>", opt)
 -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 -- It also supports tagstack
 -- Use <C-t> to jump back
-map("n", "gt", ":Lspsaga peek_type_definition<CR>", opt)
+-- map("n", "gt", ":Lspsaga peek_type_definition<CR>", opt)
 
 -- Go to type definition
 -- map("n", "gt", ":Lspsaga goto_type_definition<CR>", opt)
@@ -273,7 +236,7 @@ map("n", "gt", ":Lspsaga peek_type_definition<CR>", opt)
 -- Show line diagnostics
 -- You can pass argument ++unfocus to
 -- unfocus the show_line_diagnostics floating window
-map("n", "<leader>sl", ":Lspsaga show_line_diagnostics ++unfocus<CR>", opt)
+-- map("n", "<leader>sl", ":Lspsaga show_line_diagnostics ++unfocus<CR>", opt)
 
 -- Show cursor diagnostics
 -- Like show_line_diagnostics, it supports passing the ++unfocus argument
@@ -297,7 +260,7 @@ map("n", "<leader>sl", ":Lspsaga show_line_diagnostics ++unfocus<CR>", opt)
 -- end, opt)
 
 -- Toggle outline
-map("n", "<leader>o", ":Lspsaga outline<CR>", opt)
+-- map("n", "<leader>o", ":Lspsaga outline<CR>", opt)
 
 -- Hover Doc
 -- If there is no hover doc,
@@ -305,7 +268,7 @@ map("n", "<leader>o", ":Lspsaga outline<CR>", opt)
 -- there is no information available.
 -- To disable it just use ":Lspsaga hover_doc ++quiet"
 -- Pressing the key twice will enter the hover window
-map("n", "K", ":Lspsaga hover_doc<CR>", opt)
+-- map("n", "K", ":Lspsaga hover_doc<CR>", opt)
 
 -- If you want to keep the hover window in the top right hand corner,
 -- you can pass the ++keep argument
@@ -315,8 +278,8 @@ map("n", "K", ":Lspsaga hover_doc<CR>", opt)
 -- map("n", "K", ":Lspsaga hover_doc ++keep<CR>", opt)
 
 -- Call hierarchy
-map("n", "<Leader>ci", ":Lspsaga incoming_calls<CR>", opt)
-map("n", "<Leader>co", ":Lspsaga outgoing_calls<CR>", opt)
+-- map("n", "<Leader>ci", ":Lspsaga incoming_calls<CR>", opt)
+-- map("n", "<Leader>co", ":Lspsaga outgoing_calls<CR>", opt)
 
 -- Floating terminal
 -- 使用ToggleTerm.nvim代替
@@ -330,19 +293,19 @@ local has_words_before = function()
 end
 PluginKeyList.cmpkey = function(cmp)
     return {
-            ["<CR>"] = cmp.mapping.confirm({
+        ["<CR>"] = cmp.mapping.confirm({
             -- behavior = cmp.ConfirmBehavior.Insert,
             -- select = true,
         }),
         -- 解决complete 选择错误之后，不能自动刷新补全
-            ["<BS>"] = function(fallback)
+        ["<BS>"] = function(fallback)
             fallback()
             if cmp.visible() then
                 cmp.mapping.abort()
                 cmp.mapping.complete()
             end
         end,
-            ["<Tab>"] = function(fallback)
+        ["<Tab>"] = function(fallback)
             if not cmp.select_next_item() then
                 if vim.bo.buftype ~= "prompt" and has_words_before() then
                     cmp.complete()
@@ -351,7 +314,7 @@ PluginKeyList.cmpkey = function(cmp)
                 end
             end
         end,
-            ["<S-Tab>"] = function(fallback)
+        ["<S-Tab>"] = function(fallback)
             if not cmp.select_prev_item() then
                 if vim.bo.buftype ~= "prompt" and has_words_before() then
                     cmp.complete()
@@ -360,11 +323,11 @@ PluginKeyList.cmpkey = function(cmp)
                 end
             end
         end,
-            ["<A-,>"] = cmp.mapping({
+        ["<A-,>"] = cmp.mapping({
             i = cmp.mapping.abort(),
             s = cmp.mapping.close(),
         }),
-            ["<A-.>"] = cmp.mapping(cmp.mapping.complete()),
+        ["<A-.>"] = cmp.mapping(cmp.mapping.complete()),
         -- 如果窗口内容太多，可以滚动
         -- ["<A-u>"] = cmp.mapping(cmp.mapping.scroll_docs( -4), { "i", "c" }),
         -- ["<A-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
@@ -415,3 +378,4 @@ map("n", "<leader>db", ':lua require("dap").continue()<CR>', opt)
 map("n", "<C-i>", ':lua require("dap").step_into()<CR>', opt)
 map("n", "<C-o>", ':lua require("dap").step_out()<CR>', opt)
 map("n", "<C-p>", ':lua require("dap").step_over()<CR>', opt)
+map("n", "<C-r>", "<cmd>call coc#rpc#request('fillDiagnostics', [bufnr('%')])<CR><cmd>Trouble loclist<CR>", opt)

@@ -1,7 +1,11 @@
+-- require('lazy-plugin')
 require('basic')
 require('plugins')
 require('keybinding')
 require('autocmd')
+if G.g.neovide then
+  require('neovide')
+end
 
 -- 工具类
 require('impatient').enable_profile()
@@ -15,21 +19,17 @@ require('config.tool.hop')
 require('config.tool.gitsigns')
 require('config.tool.diffview')
 require('config.tool.project')
+require('config.tool.dashboard')
 -- lsp
 require('config.lsp.treesitter')
 require('config.lsp.treesitter-twilight')
-require('config.lsp.mason')
-require('config.lsp.lspconfig')
-require('config.lsp.cmp')
--- require('config.lsp.navic') -- 使用lspsaga代替
 require('config.lsp.trouble')
-require('config.lsp.symbol-outline') -- 有bug，preview功能暂时不能用
-require('config.lsp.lspsaga')
-require('config.lsp.null-ls')
-require('config.dap.dap')
-require('config.dap.dap-virtual-text')
-require('config.dap.dap-ui')
-require('config.dap.dap-util')
+-- require('config.dap.dap')
+-- require('config.dap.dap-virtual-text')
+-- require('config.dap.dap-ui')
+-- require('config.dap.dap-util')
+require('config.lsp.coc')
+require('config.lsp.wilder')
 -- 美化类
 require('config.beauty.theme')
 -- require('config.beauty.github-theme')

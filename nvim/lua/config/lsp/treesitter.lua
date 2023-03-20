@@ -7,7 +7,7 @@ treesitter.setup({
     -- A list of parser names, or "all" (the four listed parsers should always be installed)
     ensure_installed = "all",
     -- Install parsers synchronously (only applied to `ensure_installed`)
-    sync_install = true,
+    sync_install = false,
     -- Automatically install missing parsers when entering buffer
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
@@ -41,6 +41,13 @@ treesitter.setup({
     },
     incremental_selection = {
         enable = true,
-        keymaps = PluginKeyList.treesitter.selection,
+        keymaps = {
+            init_selection = "<CR><CR>", -- set to `false` to disable one of the mappings
+            node_incremental = "<CR><CR>",
+            scope_incremental = "<CR>o",
+            node_decremental = "<BS><BS>",
+        }
+
+        ,
     },
 })

@@ -1,0 +1,118 @@
+{
+  // coc config
+  "http.proxy": "https://127.0.0.1:7890",
+
+  "coc.preferences.formatOnSave": true,
+  "coc.source.around.shortcut": "ar",
+  "coc.source.buffer.shortcut": "buf",
+  "coc.source.file.shortcut": "file",
+  "coc.source.issues.shortcut": "isu",
+  "coc.source.dictionary.shortcut": "path",
+  "coc.source.neoinclude.shortcut": "neo",
+
+  "codeLens.enable": true,
+
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.floatConfig": {
+    "border": true
+  },
+  "diagnostic.format": "%message [%source]%code",
+  "diagnostic.hintSign": " ",
+  "diagnostic.infoSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.errorSign": " ",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextLevel": "error",
+
+  "hover.floatConfig": {
+    "border": true
+  },
+
+  "list.floatPreview": true,
+  "list.indicator": "󱙝 ",
+  "list.selectedSignText": "󰊠 ",
+  "list.nextKeymap": "<Tab>",
+  "list.previousKeymap": "<S-Tab>",
+  "list.statusLineSegments": [
+    "%#CocListMode#-- %{coc#list#status(\"mode\")} --%*",
+    "%{coc#list#status(\"loading\")}",
+    "%{coc#list#status(\"args\")}",
+    "(%L/%{coc#list#status(\"total\")})",
+    "%=",
+    "%#CocListPath# %{coc#list#status(\"cwd\")} %l/%L%*"
+  ],
+
+  "outline.autoPreview": true,
+  "outline.keepWindow": true,
+  "outline.previewBorderRounded": true,
+  "outline.switchSortKey": "",
+
+  "signature.floatConfig": {
+    "border": true
+  },
+
+  "snippet.statusText": " ",
+
+  "suggest.completionItemKindLabels": {
+    "text": " ",
+    "method": " ",
+    "function": "󰡱 ",
+    "field": " ",
+    "variable": " ",
+    "class": " ",
+    "interface": " ",
+    "module": "󰧔 ",
+    "property": " ",
+    "unit": " ",
+    "value": " ",
+    "enum": " ",
+    "keyword": " ",
+    "snippet": " ",
+    "color": " ",
+    "file": " ",
+    "reference": " ",
+    "folder": " ",
+    "enumMember": " ",
+    "constant": " ",
+    "struct": " ",
+    "event": " ",
+    "operator": " ",
+    "typeParameter": " ",
+    "default": " "
+  },
+  "suggest.floatConfig": {
+    "border": true
+  },
+  "suggest.noselect": true,
+  "suggest.virtualText": true,
+
+  "colors.enable": true,
+  "languageserver": {
+    "cmake": {
+      "command": "cmake-language-server",
+      "filetypes": ["cmake"],
+      "rootPatterns": ["build/"],
+      "initializationOptions": {
+        "buildDirectory": "build"
+      }
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "sql": {
+      "module": "/opt/homebrew/lib/node_modules/sql-language-server/dist/cli.js",
+      "args": ["up", "--method", "node-ipc"],
+      "filetypes": ["sql", "mysql"]
+    }
+  },
+  // go
+  "go.goplsOptions": {
+    "hoverKind": "FullDocumentation"
+  },
+  // lua
+  "sumneko-lua.enableNvimLuaDev": true,
+  "Lua.completion.displayContext": true
+}
