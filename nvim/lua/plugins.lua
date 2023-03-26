@@ -16,6 +16,8 @@ packer.startup({
             'glepnir/zephyr-nvim',
             requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
         }
+        -- github-theme
+        use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }
 
         -- 侧边文件目录
         use {
@@ -51,21 +53,19 @@ packer.startup({
         -- 超时时显示提示快捷键
         use { "folke/which-key.nvim" }
 
+        -- 默认载入界面
         use { 'glepnir/dashboard-nvim',
             event = 'VimEnter',
             requires = { 'nvim-tree/nvim-web-devicons' }
         }
-
         -- 高亮相同reference的词
         use { 'RRethy/vim-illuminate' }
-
         -- 函数对齐线
         use { 'lukas-reineke/indent-blankline.nvim' }
 
         -- 悬浮终端
         use { 'akinsho/toggleterm.nvim', tag = '*' }
 
-        use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }
 
         -- telescope 模糊搜索
         use {
@@ -77,40 +77,44 @@ packer.startup({
         use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         use { 'fannheyward/telescope-coc.nvim' }
         use { 'nvim-telescope/telescope-dap.nvim' }
+        use { 'debugloop/telescope-undo.nvim' }
+
+        -- beauty ui.select
+        use { 'stevearc/dressing.nvim' }
 
         -- comment 快速注释
         use { 'numToStr/Comment.nvim' }
         -- 自动括号
         use { 'windwp/nvim-autopairs' }
+        -- 环绕操作
         use { 'kylechui/nvim-surround', tag = '*' }
+        -- 撤销历史记录
+        -- use { 'mbbill/undotree' }
+        use { 'jiaoshijie/undotree', requires = 'nvim-lua/plenary.nvim' }
 
         -- git
         use { 'lewis6991/gitsigns.nvim' }
         -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-        use { 'neoclide/coc.nvim', branch = 'release' }
-        use { 'gelguy/wilder.nvim' }
-        -- project
-        use { 'ahmedkhalf/project.nvim' }
+        -- session 当作Project使用
+        use { 'Shatur/neovim-session-manager' }
 
+        -- motion 快速跳转
         use { 'phaazon/hop.nvim', branch = 'v2' }
 
         -- lsp
+        use { 'neoclide/coc.nvim', branch = 'release' }
         -- 语法高亮
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         -- 专注模式
         use { 'folke/twilight.nvim' }
-        -- TODO: use luasnip
-        -- use { 'L3MON4D3/LuaSnip', run = 'make install_jsregexp' }
-        -- 光标所在作用域
-        use { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" }
-        -- 更好的诊断
-        use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" }
         -- 显示文件大纲
-        -- use { 'simrat39/symbols-outline.nvim' }
-        -- use { 'jose-elias-alvarez/null-ls.nvim', requires = { "nvim-lua/plenary.nvim" } }
-        -- use { "rbjorklin/symbols-outline.nvim", branch = "fix-outline-detection" }
+        use { 'stevearc/aerial.nvim' }
+        -- 命令行补全
+        use { 'gelguy/wilder.nvim' }
+        -- 更好的诊断显示
+        use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" }
         use { 'mfussenegger/nvim-dap' }
         use { 'theHamsta/nvim-dap-virtual-text' }
         use { 'rcarriga/nvim-dap-ui' }

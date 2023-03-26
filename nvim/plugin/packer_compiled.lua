@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["aerial.nvim"] = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/aerial.nvim",
+    url = "https://github.com/stevearc/aerial.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -100,6 +105,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
   },
   ["github-nvim-theme"] = {
     loaded = true,
@@ -131,6 +141,11 @@ _G.packer_plugins = {
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["neovim-session-manager"] = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
+    url = "https://github.com/Shatur/neovim-session-manager"
+  },
   ["noice.nvim"] = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/noice.nvim",
@@ -160,16 +175,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-notify"] = {
     loaded = true,
@@ -206,11 +211,6 @@ _G.packer_plugins = {
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["project.nvim"] = {
-    loaded = true,
-    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/project.nvim",
-    url = "https://github.com/ahmedkhalf/project.nvim"
-  },
   ["telescope-coc.nvim"] = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/telescope-coc.nvim",
@@ -225,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-undo.nvim"] = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/telescope-undo.nvim",
+    url = "https://github.com/debugloop/telescope-undo.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -255,6 +260,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/twilight.nvim",
     url = "https://github.com/folke/twilight.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/jiaoshijie/undotree"
   },
   ["vim-bbye"] = {
     loaded = true,

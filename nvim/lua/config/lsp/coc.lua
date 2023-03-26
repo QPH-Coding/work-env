@@ -47,14 +47,14 @@ G.setkey("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-G.setkey("n", "<leader>g[", "<Plug>(coc-diagnostic-prev)", { silent = true })
-G.setkey("n", "<leader>g]", "<Plug>(coc-diagnostic-next)", { silent = true })
+G.setkey("n", "g[", "<Plug>(coc-diagnostic-prev)", { silent = true })
+G.setkey("n", "g]", "<Plug>(coc-diagnostic-next)", { silent = true })
 
 -- GoTo code navigation
-G.setkey("n", "<leader>gd", "<Plug>(coc-definition)", { silent = true })
-G.setkey("n", "<leader>gt", "<Plug>(coc-type-definition)", { silent = true })
-G.setkey("n", "<leader>gi", "<Plug>(coc-implementation)", { silent = true })
-G.setkey("n", "<leader>gr", "<Plug>(coc-references)", { silent = true })
+G.setkey("n", "gd", "<Plug>(coc-definition)", { silent = true })
+G.setkey("n", "gt", "<Plug>(coc-type-definition)", { silent = true })
+G.setkey("n", "gi", "<Plug>(coc-implementation)", { silent = true })
+G.map("n", "gh", ":Telescope coc references<CR>", { silent = true })
 
 
 -- Use K to show documentation in preview window
@@ -69,7 +69,7 @@ function _G.show_docs()
     end
 end
 
-G.setkey("n", "<leader>gk", '<CMD>lua _G.show_docs()<CR>', { silent = true })
+G.setkey("n", "gk", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
 
 -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
@@ -81,11 +81,11 @@ vim.api.nvim_create_autocmd("CursorHold", {
 })
 
 -- Symbol renaming
-G.setkey("n", "<leader>grn", "<Plug>(coc-rename)", { silent = true })
+G.setkey("n", "grn", "<Plug>(coc-rename)", { silent = true })
 
 -- Formatting selected code
-G.setkey("x", "<leader>fm", "<Plug>(coc-format-selected)", { silent = true })
-G.setkey("n", "<leader>fm", "<Plug>(coc-format-selected)", { silent = true })
+G.setkey("x", "fm", "<Plug>(coc-format-selected)", { silent = true })
+G.setkey("n", "fm", "<Plug>(coc-format-selected)", { silent = true })
 
 
 -- Setup formatexpr specified filetype(s)
@@ -107,25 +107,25 @@ vim.api.nvim_create_autocmd("User", {
 -- Apply codeAction to the selected region
 -- Example: `<leader>aap` for current paragraph
 local opts = { silent = true, nowait = true }
-G.setkey("x", "<leader>ga", "<Plug>(coc-codeaction-selected)", opts)
-G.setkey("n", "<leader>ga", "<Plug>(coc-codeaction-selected)", opts)
+G.setkey("x", "ga", "<Plug>(coc-codeaction-selected)", opts)
+G.setkey("n", "ga", "<Plug>(coc-codeaction-selected)", opts)
 
 -- Remap keys for apply code actions at the cursor position.
-G.setkey("n", "<leader>gac", "<Plug>(coc-codeaction-cursor)", opts)
+G.setkey("n", "gac", "<Plug>(coc-codeaction-cursor)", opts)
 -- Remap keys for apply code actions affect whole buffer.
 -- G.setkey("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts)
 -- Remap keys for applying codeActions to the current buffer
-G.setkey("n", "<leader>gac", "<Plug>(coc-codeaction)", opts)
+G.setkey("n", "gab", "<Plug>(coc-codeaction)", opts)
 -- Apply the most preferred quickfix action on the current line.
-G.setkey("n", "<leader>gqf", "<Plug>(coc-fix-current)", opts)
+G.setkey("n", "gqf", "<Plug>(coc-fix-current)", opts)
 
 -- Remap keys for apply refactor code actions.
-G.setkey("n", "<leader>gri", "<Plug>(coc-codeaction-refactor)", { silent = true })
-G.setkey("x", "<leader>gr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-G.setkey("n", "<leader>gr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+G.setkey("n", "grr", "<Plug>(coc-codeaction-refactor)", { silent = true })
+G.setkey("x", "gr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+G.setkey("n", "gr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 -- Run the Code Lens actions on the current line
-G.setkey("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
+G.setkey("n", "gcl", "<Plug>(coc-codelens-action)", opts)
 
 
 -- Map function and class text objects

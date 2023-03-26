@@ -3,11 +3,12 @@ local M = {}
 local beauty_config = {
     -- 󰊠 / 󱙝 .󰏩 /󱙵 .󰹢 /󰹣 .󰣉 /󰗝 .󰀚 /󰆤 .
     --  / . / .-- nf-dev-ionic & -- nf-fa-eercast
+    -- 󰼂 /󰼁 .󱙴 /󱙳 .
 
-    active = " ",
-    inactive = " ",
-    mux_inactive = " ",
-    mux_active = " ",
+    active = "󰼁 ",
+    inactive = "󰼂 ",
+    mux_active = "󱙳 ",
+    mux_inactive = "󱙴 ",
     battery = {
         Charging = "󰂄 ",
         Discharging = "󰁾 ",

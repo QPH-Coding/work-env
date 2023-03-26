@@ -3,6 +3,7 @@ if not status then
     vim.notify("没有找到 nvim-treesitter")
     return
 end
+
 treesitter.setup({
     -- A list of parser names, or "all" (the four listed parsers should always be installed)
     ensure_installed = "all",
@@ -47,7 +48,11 @@ treesitter.setup({
             scope_incremental = "<CR>o",
             node_decremental = "<BS><BS>",
         }
-
-        ,
     },
 })
+-- 开启 Folding 模块
+G.opt.foldmethod = "expr"
+G.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- 默认不要折叠
+-- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
+G.opt.foldlevel = 99

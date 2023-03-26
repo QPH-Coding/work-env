@@ -20,7 +20,13 @@ local center = {
         icon = '   ',
         desc = 'Projects      ',
         key = "p",
-        action = "Telescope projects"
+        action = "SessionManager load_session"
+    },
+    {
+        icon = '󰆳   ',
+        desc = 'Delete projects      ',
+        key = 'n',
+        action = 'SessionManager delete_session'
     },
     {
         icon = '   ',
@@ -34,12 +40,7 @@ local center = {
         key = 'f',
         action = 'Telescope find_files'
     },
-    {
-        icon = '   ',
-        desc = 'Edit projects      ',
-        key = 'n',
-        action = 'edit ~/.local/share/nvim/project_nvim/project_history'
-    },
+
     {
         icon = '   ',
         desc = 'Change Colorscheme      ',

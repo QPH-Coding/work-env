@@ -1,7 +1,9 @@
 #!/bin/sh
 
+rm -r ./nvim/*
 cp -r ~/.config/nvim/* ./nvim/
-cp ~/.config/wezterm/wezterm.lua ./wezterm/
+rm -r ./wezterm/*
+cp ~/.config/wezterm/* ./wezterm/
 cp ~/.config/starship.toml ./starship/
 cp -r ~/.tmux/* ./tmux/.tmux/
 cp ~/.tmux.conf ./tmux/

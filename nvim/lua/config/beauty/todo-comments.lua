@@ -22,7 +22,7 @@ todo_comments.setup {
         PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
         NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
         TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-        KEY = { icon = Icons.Keyword, colors = "key", alt = { "keybindings" } }
+        KEY = { icon = " ", colors = "key", alt = { "keybindings", "keymap" } }
     },
     gui_style = {
         fg = "NONE",       -- The gui style to use for the fg highlight group.

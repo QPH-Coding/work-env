@@ -7,20 +7,20 @@ if not status then
 end
 
 trouble.setup {
-    position = "right", -- position of the list can be: bottom, top, left, right
-    height = 10,        -- height of the trouble list when position is top or bottom
-    width = 50,         -- width of the list when position is left or right
-    icons = true,       -- use devicons for filenames
-    mode = "loclist",   -- "workspace_diagnostics", "document_diagnostics", "quickfix", "lsp_references", "loclist"
-    fold_open = "",  -- icon used for open folds
+    -- position = "buttom", -- position of the list can be: bottom, top, left, right
+    height = 10,       -- height of the trouble list when position is top or bottom
+    width = 50,        -- width of the list when position is left or right
+    icons = true,      -- use devicons for filenames
+    mode = "loclist",  -- "workspace_diagnostics", "document_diagnostics", "quickfix", "lsp_references", "loclist"
+    fold_open = "", -- icon used for open folds
     fold_closed = "", -- icon used for closed folds
-    group = true,       -- group results by file
-    padding = true,     -- add an extra new line on top of the list
+    group = true,      -- group results by file
+    padding = true,    -- add an extra new line on top of the list
     action_keys = {
         -- key mappings for actions in the trouble list
         -- map to {} to remove a mapping, for example:
         -- close = {},
-        close = "q",                   -- close the list
+        close = { "q", "<space>e" },   -- close the list
         cancel = "<esc>",              -- cancel the preview and get back to your last window / buffer / cursor
         refresh = "r",                 -- manually refresh
         jump = "<cr>",                 -- jump to the diagnostic or open / close folds
@@ -55,4 +55,4 @@ trouble.setup {
     use_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
 }
 
-G.map("n", "<leader>sd", ":CocDiagnostics<CR>:q<CR>:TroubleToggle<CR>", G.opt)
+G.map("n", "<leader>e", ":CocDiagnostics<CR>:q<CR>:TroubleToggle<CR>", G.opt)

@@ -36,6 +36,5 @@ wilder.set_option('renderer', wilder.popupmenu_renderer(
 ))
 G.cmd("silent! UpdateRemotePlugins")
 G.map('c', '<tab>', [[wilder#in_context() ? wilder#next() : '<tab>']], { noremap = true, expr = true })
-G.map('c', '<Down>', [[wilder#in_context() ? wilder#next() : '<down>']], { noremap = true, expr = true })
-G.map('c', '<up>', [[wilder#in_context() ? wilder#previous() : '<up>']], { noremap = true, expr = true })
+G.map('c', '<S-tab>', [[wilder#in_context() ? wilder#previous() : '<up>']], { noremap = true, expr = true })
 G.map('c', '0', '0', {}) -- 不清楚原因导致0无法使用 强制覆盖

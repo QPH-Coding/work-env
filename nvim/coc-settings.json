@@ -2,6 +2,7 @@
   // coc config
   "http.proxy": "https://127.0.0.1:7890",
 
+  "coc.preferences.floatActions": true,
   "coc.preferences.formatOnSave": true,
   "coc.source.around.shortcut": "ar",
   "coc.source.buffer.shortcut": "buf",
@@ -13,10 +14,8 @@
   "codeLens.enable": true,
 
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.floatConfig": {
-    "border": true
-  },
-  "diagnostic.format": "%message [%source]%code",
+  "diagnostic.floatConfig": {},
+  "diagnostic.format": "%message [%source-%code]",
   "diagnostic.hintSign": " ",
   "diagnostic.infoSign": " ",
   "diagnostic.warningSign": " ",
@@ -25,9 +24,7 @@
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualTextLevel": "error",
 
-  "hover.floatConfig": {
-    "border": true
-  },
+  "hover.floatConfig": {},
 
   "list.floatPreview": true,
   "list.indicator": "󱙝 ",
@@ -48,9 +45,7 @@
   "outline.previewBorderRounded": true,
   "outline.switchSortKey": "",
 
-  "signature.floatConfig": {
-    "border": true
-  },
+  "signature.floatConfig": {},
 
   "snippet.statusText": " ",
 
@@ -81,9 +76,7 @@
     "typeParameter": " ",
     "default": " "
   },
-  "suggest.floatConfig": {
-    "border": true
-  },
+  "suggest.floatConfig": {},
   "suggest.noselect": true,
   "suggest.virtualText": true,
 
@@ -114,5 +107,6 @@
   },
   // lua
   "sumneko-lua.enableNvimLuaDev": true,
-  "Lua.completion.displayContext": true
+  "Lua.completion.displayContext": true,
+  "git.signPriority": 0
 }

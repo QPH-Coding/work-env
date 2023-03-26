@@ -11,7 +11,7 @@ return {
     }),
     font_size = 15.0,
     color_scheme = 'tokyonight',
-    window_background_opacity = 0.75,
+    -- window_background_opacity = 0.75,
     enable_scroll_bar = true,
     window_padding = {
         left = 0,
@@ -19,7 +19,6 @@ return {
         top = 0,
         bottom = 0,
     },
-    pane_focus_follows_mouse = true,
     use_cap_height_to_scale_fallback_fonts = true,
     native_macos_fullscreen_mode = false,
     -- tab_bar_at_bottom = true,
