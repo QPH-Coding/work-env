@@ -1,0 +1,24 @@
+snippet pac "package..." b
+package ${1:package-name}
+
+snippet main "func main()"
+	func main() {
+		${1}
+	}
+	${0}
+
+snippet str "struct..." b
+type ${1:name} struct {
+	${2:member}
+}
+
+snippet int "interface..." b
+type ${1:interface} interface  {
+	${2:func...}
+}
+
+snippet fp "fmt.Printf..." b
+fmt.Printf("${1:msg}")
+
+snippet fsp "fmt.Sprintf..." b
+fmt.Sprintf("${1:msg}")

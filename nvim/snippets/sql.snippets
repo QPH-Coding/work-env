@@ -1,0 +1,29 @@
+snippet insert "INSERT..." b
+INSERT INTO ${1:table}(${2:fields}) VALUES(${3:values});
+
+snippet select "SELECT..." b
+SELECT ${2:column} FROM ${1:table} WHERE ${3:condition};
+
+snippet delete "DELETE..." b
+DELETE FROM ${1:table} WHERE ${2:condition};
+
+snippet update "UPDATE..." b
+UPDATE ${1:table} SET ${2:expr} WHERE ${3:condtion};
+
+snippet created "Create Database..." b
+CREATE DATABASE ${1:name};
+
+snippet dropd "Drop Database..." b
+DROP DATABASE ${1:name};
+
+snippet createt "Create Table..." b
+CREATE TABLE IF NOT EXISTS `${1:table}`(
+   `${2:id}` UNSIGNED INT AUTO_INCREMENT NOT NULL COMMENT "${3:desc}",
+   CONSTRAINT `${4:constraint-key}_pk` PRIMARY KEY (`${5:id}`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT="${6:desc}";
+
+snippet column "Table Column..." b
+	`${1:field}` ${2:INT} NOT NULL COMMENT "${3:desc}",
+
+snippet dropt "Drop Table" b
+DROP TABLE ${1:name};

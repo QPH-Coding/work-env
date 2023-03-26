@@ -81,6 +81,7 @@
   "suggest.virtualText": true,
 
   "colors.enable": true,
+  "snippets.ultisnips.enable": true,
   "languageserver": {
     "cmake": {
       "command": "cmake-language-server",
@@ -101,6 +102,7 @@
       "filetypes": ["sql", "mysql"]
     }
   },
+  "clangd.arguments": [],
   // go
   "go.goplsOptions": {
     "hoverKind": "FullDocumentation"

@@ -32,7 +32,6 @@ map("i", "<C-j>", "<down>", opt)
 map("i", "<C-k>", "<up>", opt)
 
 -- 终端相关
-map("n", "<leader>t", ":ToggleTerm<CR>", opt)
 map("t", "<Esc>", "<C-\\><C-n>", opt)
 map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
 map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
