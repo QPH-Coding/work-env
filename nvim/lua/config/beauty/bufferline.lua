@@ -103,7 +103,8 @@ bufferline.setup {
         --   return buffer_a.modified > buffer_b.modified
         -- end
     }
-} -- bufferline keybinding
+}
+-- bufferline keybindings:
 G.map("n", "<C-h>", ":BufferLineCyclePrev<CR>", G.mapopt)
 G.map("n", "<C-l>", ":BufferLineCycleNext<CR>", G.mapopt)
 G.map("n", "<C-w>", ":Bdelete<CR>", G.mapopt)

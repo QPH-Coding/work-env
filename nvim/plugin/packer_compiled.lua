@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/coc.nvim",
@@ -201,6 +206,11 @@ _G.packer_plugins = {
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -270,11 +280,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
-  },
-  ["vim-illuminate"] = {
-    loaded = true,
-    path = "/Users/qianpeihua/.local/share/nvim/site/pack/packer/start/vim-illuminate",
-    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["which-key.nvim"] = {
     loaded = true,

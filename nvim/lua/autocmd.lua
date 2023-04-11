@@ -9,4 +9,15 @@ vim.cmd([[
     autocmd!
     autocmd VimResized * tabdo wincmd =
   augroup end
+
+  " augroup _coc_highlight
+  "   autocmd!
+  "   autocmd CursorHold * silent call CocActionAsync('highlight')
+  " augroup end
+
+  augroup _winbar_update
+    autocmd!
+    autocmd CursorHold * silent :lua require('config.lsp.winbar').breadcrumbs()
+  augroup end
+
 ]])

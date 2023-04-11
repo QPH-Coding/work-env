@@ -16,8 +16,10 @@ packer.startup({
             'glepnir/zephyr-nvim',
             requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
         }
-        -- github-theme
         use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }
+        use { 'catppuccin/nvim', as = 'catppuccin' }
+        use { 'navarasu/onedark.nvim' }
+        use { 'marko-cerovac/material.nvim' }
 
         -- 侧边文件目录
         use {
@@ -59,7 +61,7 @@ packer.startup({
             requires = { 'nvim-tree/nvim-web-devicons' }
         }
         -- 高亮相同reference的词
-        use { 'RRethy/vim-illuminate' }
+        -- use { 'RRethy/vim-illuminate' }
         -- 函数对齐线
         use { 'lukas-reineke/indent-blankline.nvim' }
 

@@ -2,6 +2,7 @@
 
 rm -r ./nvim/*
 cp -r ~/.config/nvim/* ./nvim/
+cp -r ~/.config/lvim/* ./lvim/
 rm -r ./wezterm/*
 cp ~/.config/wezterm/* ./wezterm/
 cp ~/.config/starship.toml ./starship/

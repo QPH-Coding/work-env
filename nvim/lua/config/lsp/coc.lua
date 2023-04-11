@@ -18,7 +18,8 @@ G.g.coc_global_extensions = {
     'coc-snippets', 'coc-pairs', 'coc-word',
     'coc-translator', 'coc-spell-checker', 'coc-json',
     'coc-docker',
-    'coc-git', 'coc-dictionary', 'coc-swagger'
+    'coc-git', 'coc-dictionary', 'coc-swagger',
+    "coc-highlight"
 }
 
 -- Autocomplete

@@ -129,7 +129,8 @@ dap.adapters.go = function(callback, config)
         function()
             callback({ type = "server", host = "127.0.0.1", port = port })
         end,
-        300)
+        300
+    )
 end
 
 -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md

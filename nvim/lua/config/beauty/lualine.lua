@@ -36,12 +36,6 @@ local bubbles_theme = {
     },
 }
 
--- local function nvim_mode()
---     local mode = vim.api.nvim_get_mode()
---
--- end
-
-
 lualine.setup {
     options = {
         theme = bubbles_theme,
@@ -53,7 +47,6 @@ lualine.setup {
         lualine_a = {
             {
                 'mode',
-                --               vim.api.nvim_get_mode(),
                 icon = '󰌪 ',
                 -- separator = { left = '' },
                 right_padding = 2
@@ -69,13 +62,13 @@ lualine.setup {
                 sources = { 'coc' },
                 -- Displays diagnostics for the defined severity types
                 sections = { 'error', 'warn', 'info', 'hint' },
-                diagnostics_color = {
-                    -- Same values as the general color option can be used here.
-                    error = 'DiagnosticError', -- Changes diagnostics' error color.
-                    warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-                    info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-                    hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-                },
+                -- diagnostics_color = {
+                --     -- Same values as the general color option can be used here.
+                --     error = 'DiagnosticError', -- Changes diagnostics' error color.
+                --     warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
+                --     info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
+                --     hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
+                -- },
                 symbols = {
                     error = Icons.Error,
                     warn = Icons.Warning,
@@ -84,7 +77,7 @@ lualine.setup {
                 },
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
-                always_visible = true,    -- Show diagnostics even if there are none.
+                always_visible = false,   -- Show diagnostics even if there are none.
             },
             {
                 'filename',
@@ -98,10 +91,10 @@ lualine.setup {
                 shorting_target = 40, -- Shortens path to leave 40 spaces in the window
                 -- for other components. (terrible name, any suggestions?)
                 symbols = {
-                    modified = '', -- Text to show when the file is modified.
-                    readonly = '', -- Text to show when the file is non-modifiable or readonly.
-                    unnamed = '', -- Text to show for unnamed buffers.
-                    newfile = '', -- Text to show for newly created file before first write
+                    modified = '*', -- Text to show when the file is modified.
+                    readonly = '!', -- Text to show when the file is non-modifiable or readonly.
+                    unnamed = '?',  -- Text to show for unnamed buffers.
+                    newfile = '+',  -- Text to show for newly created file before first write
                 }
             },
             -- { navic.get_location, cond = navic.is_available },
@@ -245,10 +238,10 @@ lualine.setup {
                 shorting_target = 40, -- Shortens path to leave 40 spaces in the window
                 -- for other components. (terrible name, any suggestions?)
                 symbols = {
-                    modified = '', -- Text to show when the file is modified.
-                    readonly = '', -- Text to show when the file is non-modifiable or readonly.
-                    unnamed = '', -- Text to show for unnamed buffers.
-                    newfile = '', -- Text to show for newly created file before first write
+                    modified = '*', -- Text to show when the file is modified.
+                    readonly = '!', -- Text to show when the file is non-modifiable or readonly.
+                    unnamed = '?',  -- Text to show for unnamed buffers.
+                    newfile = '+',  -- Text to show for newly created file before first write
                 }
             }
         },

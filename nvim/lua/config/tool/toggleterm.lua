@@ -8,7 +8,7 @@ require("toggleterm").setup {
     --     return vim.o.columns * 0.4
     --   end
     -- end,
-    open_mapping = [[<c-\>]],
+    open_mapping = [['<C-t>']],
     -- on_create = fun(t: Terminal), -- function to run when the terminal is first created
     -- on_open = fun(t: Terminal), -- function to run when the terminal opens
     -- on_close = fun(t: Terminal), -- function to run when the terminal closes
@@ -62,4 +62,5 @@ require("toggleterm").setup {
         end
     },
 }
-G.map("n", "<C-t>", ":ToggleTerm<CR>", G.mapopt)
+G.map("n", "<C-t>", ":ToggleTerm<CR><C-\\><C-n>i", G.mapopt)
+G.map("t", "<C-t>", "<C-\\><C-n>:ToggleTerm<CR>", G.mapopt)

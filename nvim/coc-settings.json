@@ -2,6 +2,8 @@
   // coc config
   "http.proxy": "https://127.0.0.1:7890",
 
+  "highlight.colors.enable": false,
+
   "coc.preferences.floatActions": true,
   "coc.preferences.formatOnSave": true,
   "coc.source.around.shortcut": "ar",
@@ -9,7 +11,9 @@
   "coc.source.file.shortcut": "file",
   "coc.source.issues.shortcut": "isu",
   "coc.source.dictionary.shortcut": "path",
-  "coc.source.neoinclude.shortcut": "neo",
+  "coc.source.neoinclude.shortcut": "vim",
+  "coc.source.db.shortcut": "db",
+  "coc.source.word.shortcut": "word",
 
   "codeLens.enable": true,
 
@@ -78,7 +82,7 @@
   },
   "suggest.floatConfig": {},
   "suggest.noselect": true,
-  "suggest.virtualText": true,
+  "suggest.virtualText": false,
 
   "colors.enable": true,
   "snippets.ultisnips.enable": true,
